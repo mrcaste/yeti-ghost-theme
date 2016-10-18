@@ -1,0 +1,9 @@
+{{!< default}}
+
+{{#foreach posts}}
+    <article class="">
+        <h2><a href="{{url}}">{{title}}</a></h2>
+        <p>{{excerpt words="26"}} <a href="{{url}}">&raquo;</a></p>
+        <p>Posted by {{author}} {{tags prefix=" on "}} at <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time></p>
+    </article>
+{{/foreach}}
