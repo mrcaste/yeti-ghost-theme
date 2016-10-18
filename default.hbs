@@ -1,13 +1,70 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Yeti-Ghost-Theme</title>
+    {{!-- Document Settings --}}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{!-- Page Meta --}}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+    <meta name="author" content="">
+
+    {{!-- Mobile Meta --}}
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{!-- Brand icon --}}
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{!-- Optional Bootstrap Theme --}}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}">
+
+    {{ghost_head}}
 </head>
 <body>
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{@blog.url}}">Yeti Ghost Theme</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class=""><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     {{{body}}}
 
-    <footer>
-        2016 - @mrcaste
-    </footer>
+    <div class="container">            
+        <footer class="site-footer clearfix">
+            <section class="copyright text-center">
+                <small><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</small>
+            </section>
+            <section class="poweredby text-center">
+                <small>Proudly published with <a href="https://ghost.org">Ghost</a></small>
+            </section>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    {{ghost_foot}}
+
+    <script type="text/javascript" src="{{asset "js/main.js"}}"></script>
 </body>
 </html>

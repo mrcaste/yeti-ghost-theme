@@ -1,0 +1,29 @@
+
+<hr class="featurette-divider">
+
+{{#foreach posts}}
+    <article class="row featurette {{post_class}}">        
+        <div class="col-md-7{{#if @even}} col-md-push-5{{/if}}">
+            <header class="post-header featurette-heading">
+                <h2 class="post-title">
+                    <a href="{{url}}">{{title}}</a> <span class="text-sm text-muted">date</span>
+                </h2>
+            </header>
+            <section class="post-excerpt">
+                <p class="lead">{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+            </section>
+            <footer class="post-meta">
+                <p class="">Posted by {{author}}</p>
+                <p>
+                    {{tags prefix=" on "}} at <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+                </p>
+            </footer>
+        </div>
+        <div class="col-md-5{{#if @even}} col-md-pull-7{{/if}}">
+            {{#if image}}
+                <img class="featurette-image img-responsive center-block author-thumb" src="{{image}}" alt="{{title}}" nopin="nopin" />
+            {{/if}}
+        </div>
+    </article>
+    <hr class="featurette-divider">
+{{/foreach}}

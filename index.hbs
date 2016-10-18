@@ -1,9 +1,18 @@
 {{!< default}}
 
-{{#foreach posts}}
-    <article class="">
-        <h2><a href="{{url}}">{{title}}</a></h2>
-        <p>{{excerpt words="26"}} <a href="{{url}}">&raquo;</a></p>
-        <p>Posted by {{author}} {{tags prefix=" on "}} at <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time></p>
-    </article>
-{{/foreach}}
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron" {{#if @blog.cover}} style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+  <div class="container">
+    <h1 class="text-center">{{@blog.title}}</h1>
+    <p class="text-center">{{@blog.description}}</p>
+    <p class="text-center">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a>
+    </p>
+  </div>
+</div>
+
+<div class="container">  
+    <main id="content" class="content" role="main">
+        {{> "loop" }}
+    </main>
+</div>

@@ -3,7 +3,7 @@ module.exports = function(grunt){
         pkg: grunt.file.readJSON('package.json'),
         watch: {
             options: {livereload: true},
-            files: ['./*.hbs'],
+            files: ['./*.hbs', 'assets/**', 'partials/**'],
             tasks: ''
         }
     });
