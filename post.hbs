@@ -13,7 +13,7 @@
             <h1 class="post-title">{{title}}</h1>
             <section class="post-meta">
                 <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
-                by {{author.name}}
+                por {{author.name}}
             </section>
             <section class="post-tags">
                 {{tags}}
@@ -28,7 +28,7 @@
             {{#author}}
                 {{#if image}}
                 <figure class="author-image">
-                    <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
+                    <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">Fotografía de {{name}}</span></a>
                 </figure>
                 {{/if}}
 
@@ -37,7 +37,7 @@
                     {{#if bio}}
                         <p>{{bio}}</p>
                     {{else}}
-                        <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                        <p>Leer <a href="{{url}}">más entradas</a> de este autor.</p>
                     {{/if}}
                     <div class="author-meta">
                         {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
@@ -47,16 +47,16 @@
             {{/author}}
 
             <section class="share">
-                <h4>Share this post</h4>
-                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
+                <h4>Compartir esta entrada</h4>
+                <a class="fa fa-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
                     onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
                     <span class="hidden">Twitter</span>
                 </a>
-                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                <a class="fa fa-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
                     onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
                     <span class="hidden">Facebook</span>
                 </a>
-                <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                <a class="fa fa-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
                    onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
                     <span class="hidden">Google+</span>
                 </a>
