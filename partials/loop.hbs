@@ -2,28 +2,28 @@
 <hr class="featurette-divider">
 
 {{#foreach posts}}
-    <article class="row featurette {{post_class}}">        
-        <div class="col-md-7{{#if @even}} col-md-push-5{{/if}}">
-            <header class="post-header featurette-heading">
-                <h2 class="post-title">
+    <article class="row featurette">        
+        <div class="{{#if image}}col-md-7{{#if @even}} col-md-push-5{{/if}}{{else}}col-md-12{{/if}}">
+            <header class="featurette-heading">
+                <h2 class="">
                     <a href="{{url}}">{{title}}</a>
                 </h2>
             </header>
-            <section class="post-excerpt">
+            <section class="">
                 <p class="lead">{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
             </section>
-            <footer class="post-meta">
+            <footer class="">
                 <p class="">
-                    Posted by {{author}},
+                    Posted by {{author}}
                     {{tags prefix=" on "}} at <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
                 </p>
             </footer>
         </div>
+        {{#if image}}
         <div class="col-md-5{{#if @even}} col-md-pull-7{{/if}}">
-            {{#if image}}
                 <img class="featurette-image img-responsive center-block author-thumb" src="{{image}}" alt="{{title}}" nopin="nopin" />
-            {{/if}}
         </div>
+        {{/if}}
     </article>
     <hr class="featurette-divider">
 {{/foreach}}
