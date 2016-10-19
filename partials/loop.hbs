@@ -6,15 +6,15 @@
         <div class="col-md-7{{#if @even}} col-md-push-5{{/if}}">
             <header class="post-header featurette-heading">
                 <h2 class="post-title">
-                    <a href="{{url}}">{{title}}</a> <span class="text-sm text-muted">date</span>
+                    <a href="{{url}}">{{title}}</a>
                 </h2>
             </header>
             <section class="post-excerpt">
                 <p class="lead">{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
             </section>
             <footer class="post-meta">
-                <p class="">Posted by {{author}}</p>
-                <p>
+                <p class="">
+                    Posted by {{author}},
                     {{tags prefix=" on "}} at <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
                 </p>
             </footer>

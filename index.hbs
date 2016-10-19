@@ -1,17 +1,17 @@
 {{!< default}}
 
 <!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron" {{#if @blog.cover}} style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
-  <div class="container">
+<div class="jumbotron main-header" {{#if @blog.cover}} style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
+  <div class="container main-header-content">
     <h1 class="text-center">{{@blog.title}}</h1>
     <p class="text-center">{{@blog.description}}</p>
     <p class="text-center">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a>
+        <a class="btn btn-primary btn-lg" href="#blog" role="button">Learn more &raquo;</a>
     </p>
   </div>
 </div>
 
-<div class="container">  
+<div class="container" id="blog">
     <main id="content" class="content" role="main">
         {{> "loop" }}
     </main>

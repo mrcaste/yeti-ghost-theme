@@ -1,11 +1,50 @@
 {{!< default}}
-
 {{#post}}
-    <article>
-        <h1>{{title}}</h1>
-        <p>{{content}}</p>
+
+<header class="jumbotron post-head main-header {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}">
+</header>
+
+<main class="container content">
+    <article class="{{post_class}}">
+
+        <header class="post-header">
+            <h1 class="post-title">{{title}}</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
+                by {{author.name}}
+            </section>
+            <section class="post-tags">
+                {{tags}}
+            </section>
+        </header>
+        
+        <section class="post-content">
+            {{content}}
+        </section>
+
+        <footer class="post-footer">
+            {{#author}}
+                {{#if image}}
+                <figure class="author-image">
+                    <a class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
+                </figure>
+                {{/if}}
+
+                <section class="author">
+                    <h4 class="author-title"><a href="{{url}}">{{name}}</a></h4>
+                    {{#if bio}}
+                        <p>{{bio}}</p>
+                    {{else}}
+                        <p>Read <a href="{{url}}">more posts</a> by this author.</p>
+                    {{/if}}
+                    <div class="author-meta">
+                        {{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
+                        {{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+                    </div>
+                </section>
+            {{/author}}
+        </footer>
     </article>
+</main>
+
 {{/post}}
-<p>
-    <a href="/">&lt;&lt; Back</a>
-</p>
