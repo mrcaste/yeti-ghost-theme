@@ -11,7 +11,7 @@
 }
 
 .main-header-content {
-    margin-top: 25vh;
+    margin-top: 15vh;
 }
 
 .post-head.main-header {
@@ -42,6 +42,10 @@
   font-weight: 300;
   line-height: 1;
   letter-spacing: -1px;
+}
+
+.section-social-links {
+    padding: 15px 0;
 }
 
 .post {
@@ -353,7 +357,7 @@
     }
 
     .main-header-content {
-        margin-top: 15vh;
+        margin-top: 10vh;
     }
 
     .post {
