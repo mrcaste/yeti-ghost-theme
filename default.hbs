@@ -34,12 +34,7 @@
 
     <div class="container">            
         <footer class="site-footer clearfix">
-            <section class="copyright text-center">
-                <small><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</small>
-            </section>
-            <section class="poweredby text-center">
-                <small>Orgullosamente publicado con <a href="https://ghost.org">Ghost</a></small>
-            </section>
+            {{> "footer" }}
         </footer>
     </div>
 
@@ -48,6 +43,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
     {{ghost_foot}}
+
+    {{> "google_analytics" }}
+    {{> "disqus_count" }}
 
     <script type="text/javascript" src="{{asset "js/main.js"}}"></script>
 </body>
