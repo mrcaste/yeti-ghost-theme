@@ -82,7 +82,7 @@
 }
 
 .post-template .post-meta {
-    margin: 0;
+    margin: 1rem;
 }
 
 .post-template .post-date {
@@ -386,7 +386,10 @@
 
     .main-header {
         margin-bottom: 15px;
-        height: 40vh;
+        height: 100vh;
+    }
+    .nav-justified>li {
+        /*float: left;*/
     }
 
     .no-cover.main-header {
@@ -505,7 +508,7 @@
     }
 
     .post-footer .author-image {
-        top: -60px;
+        top: -40px;
     }
 
     .author-profile .author-image {
@@ -514,6 +517,11 @@
 
     .author-profile .author-meta span {
         font-size: 1.4rem;
+    }
+
+    .poweredby small {
+        display: block;
+        float: none !important;
     }
 
 }
