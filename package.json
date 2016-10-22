@@ -1,6 +1,6 @@
 {
   "name": "yeti",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Theme for Ghost based on Yeti bootswatch.com/yeti/.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
